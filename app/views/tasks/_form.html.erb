@@ -1,0 +1,19 @@
+<%= form_for(@task) do |f| %>
+  <div class="d-flex justify-content-center">
+    <div class="form-group col-lg-8 col-12">
+      <%= f.label :title%>
+      <%= f.text_field :title, class: 'form-control mb-3' %>
+      <%= f.label :details %>
+      <%= f.text_field :details, class: 'form-control mb-3' %>
+      <%= f.label :completed %>
+      <%= f.check_box :completed, class: 'mb-3' %>
+      <br>
+      <div class="d-flex align-items-center">
+        <%= f.submit class: "btn btn-primary" %>
+        <p><%= link_to tasks_path do %>
+          <i class="fas fa-backward ms-3 mt-3"></i>
+        <% end %>
+      </div>
+    </div>
+  </div>
+<% end %>

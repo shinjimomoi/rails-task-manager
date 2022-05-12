@@ -1,0 +1,26 @@
+<div class="container mt-5">
+  <div class="d-flex justify-content-center">
+    <div class="card-product d-flex col-8">
+      <div class="card-product-infos">
+        <h2><%= @task.title %></h2>
+        <p>Details:<%= @task.details %></p>
+        <div class="d-flex">
+          <p><%= link_to edit_task_path do %>
+            <i class="fas fa-pencil-alt"></i>
+          <% end %>
+          </p>
+          <p><%= link_to task_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } do %>
+            <i class="fas fa-trash"></i>
+            <% end %>
+          </p>
+          <p><%= link_to tasks_path do %>
+          <i class="fas fa-backward"></i>
+          <% end %>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
